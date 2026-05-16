@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Brick Breaker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="hud">
+        <div class="stat"><span>Score</span><strong id="scoreValue">0</strong></div>
+        <div class="stat"><span>Lives</span><strong id="livesValue">5</strong></div>
+        <div class="stat"><span>Level</span><strong id="levelValue">1</strong></div>
+      </header>
+
+      <main class="game-shell">
+        <canvas id="gameCanvas" width="960" height="600" aria-label="Brick breaker game canvas"></canvas>
+
+        <section id="menuScreen" class="overlay visible" role="dialog" aria-live="polite">
+          <div class="panel glow">
+            <h1>Neon Brick Breaker</h1>
+            <p>Break bricks, survive as long as you can.</p>
+            <div class="controls-hint">
+              <span>Move: ← → or A / D</span>
+            </div>
+            <button id="startBtn" class="btn primary">Start Game</button>
+          </div>
+        </section>
+
+        <section id="gameOverScreen" class="overlay" role="dialog" aria-live="polite">
+          <div class="panel glow">
+            <h2>Game Over</h2>
+            <p id="gameOverText">You reached level 1 with 0 points.</p>
+            <div class="button-row">
+              <button id="retryBtn" class="btn">Retry Level</button>
+              <button id="restartBtn" class="btn primary">Start Over</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
