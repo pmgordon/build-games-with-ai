@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hud">
+        <div class="stat"><span>Score</span><strong id="scoreValue">0</strong></div>
+        <div class="stat"><span>Best</span><strong id="bestValue">0</strong></div>
+        <div class="stat"><span>Status</span><strong id="statusValue">Ready</strong></div>
+      </header>
+
+      <main class="game-shell">
+        <canvas id="gameCanvas" width="420" height="700" aria-label="Flappy Bird game canvas"></canvas>
+
+        <section id="startScreen" class="overlay visible" role="dialog" aria-live="polite">
+          <div class="panel">
+            <h1>Flappy Bird</h1>
+            <p>Press <strong>Space</strong> or click to flap through the pipes.</p>
+            <p class="sub">Press <strong>P</strong> to pause during gameplay.</p>
+            <button id="startBtn" class="btn primary">Start Game</button>
+          </div>
+        </section>
+
+        <section id="gameOverScreen" class="overlay" role="dialog" aria-live="polite">
+          <div class="panel">
+            <h2>Game Over</h2>
+            <p id="gameOverText">You scored 0.</p>
+            <div class="button-row">
+              <button id="retryBtn" class="btn">Retry</button>
+              <button id="restartBtn" class="btn primary">Start Over</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
